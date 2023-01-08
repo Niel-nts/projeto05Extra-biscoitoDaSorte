@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --ff-title: 'Monteserrat', sans-serif;
+    --ff-paragraph: 'DM sans', sans-serif;
+    --ff-cookie: 'Dancing Script', sans-serif;
+    --fc-title: #34355B;
+    --bg-button: #FF9500;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(45deg, #190361 0%, #BB00FF 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentClose, .contentOpen {
+   margin-bottom: 5%;
+   background: white;
+   border-radius: .5rem;
+   box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 48px 64px;
+}
+
+.contentClose img:active{
+    animation: tilt-n-move-shaking 0.25s;
+}
+
+h1 {
+    width: 25.8rem;
+    margin-bottom: 1.4rem;
+    font-family: var(--ff-title);
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    color: var(--fc-title);
+    text-align: center;
+}
+
+p {
+    margin-bottom: 2rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: var(--ff-paragraph);
+    color: var(--fc-title);
+}
+
+.hidden {
+    display: none;
+}
+
+.msg {
+    padding: 1rem;
+    width: 29.3rem;
+    background: #E4EDF1;
+    box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+    margin-bottom: 1.7rem;
+}
+
+.msg p {
+    margin: auto;
+    font-family: var(--ff-cookie);
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    text-align: center;
+    
+}
+
+.contentOpen img {
+    margin-bottom: 1.7rem;
+}
+
+button {
+    border: none;
+    background: var(--bg-button);
+    width: 17.4rem;
+    height: 5.2rem;
+    border-radius: .4rem;
+    color: white;
+    font-family: var(--ff-paragraph);
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+@keyframes tilt-n-move-shaking {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5px, 5px) rotate(5deg); }
+    50% { transform: translate(0, 0) rotate(0eg); }
+    75% { transform: translate(-5px, 5px) rotate(-5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+  }
